@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#insertSpecialCharacter").click(function () {
+  $(".insertSpecialCharacter").click(function () {
     var module = $("#specialCharactersModal");
     if (module.css('display') != "none") {
       module.slideUp("fast");
@@ -11,8 +11,10 @@ $(document).ready(function () {
   $("#cancelspecialCharacters").click(function () {
     $("#specialCharactersModal").slideUp("fast");
   });
-  $(".specialChars").on('click', '.specialChar', function(){
+  $("#specialCharactersModal").on('click', '.specialChar', function(){
     var char = ($(this).text());
+    $('.usedSpecialCharacters').append(this);
+    $('.usedSpecialCharactersLabel').show();
     var padeditor = require('ep_etherpad-lite/static/js/pad_editor').padeditor;
     $("#specialCharactersModal").slideUp("fast");
     return padeditor.ace.callWithAce(function (ace) {
@@ -26,9 +28,7 @@ $(document).ready(function () {
   var i = 0;
   var total = 65535;
   while (i <= 5000){
-    console.log(i);
     $('.specialChars').append("<li class='specialChar'>&#"+i+"</li>");
-
     i++;
   }
 

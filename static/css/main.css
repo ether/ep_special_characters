@@ -40,3 +40,7 @@
   scrolling:auto;
   max-height:500px;
 }
+
+.usedSpecialCharactersLabel{
+  display:none;
+}
