@@ -21,3 +21,8 @@ exports.eejsBlock_styles = function (hook_name, args, cb) {
   args.content = args.content + eejs.require("ep_special_characters/templates/styles.ejs", {}, module);
   return cb();
 }
+
+exports.eejsBlock_dd_insert = function (hook_name, args, cb){
+  args.content = args.content + eejs.require('ep_special_characters/templates/special_characters_menu.ejs');
+}
+
