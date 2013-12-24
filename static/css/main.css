@@ -11,7 +11,12 @@
   max-width:99%;
 }
 
-.buttonicon-special-characters { background: url(static/plugins/ep_special_characters/static/html/editbar_icon.png) !important; }
+.buttonicon-special-characters { 
+  background: none; 
+  color:#666;
+  font-size:18px;
+  margin-top:-5px;
+}
 
 .specialCharactersButton {
   padding:10px;
