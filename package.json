@@ -1,14 +1,1 @@
-{
-  "name": "ep_special_characters",
-  "description": "Insert special characters into a pad",
-  "version": "0.0.8",
-  "author": {
-    "name": "Johnyma22",
-    "email": "john@mclear.co.uk",
-    "url": "http://mclear.co.uk"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": "*"
-  }
-}
+{"name":"ep_special_characters","description":"Insert special characters into a pad","version":"0.0.8","author":{"name":"Johnyma22","email":"john@mclear.co.uk","url":"http://mclear.co.uk"},"dependencies":{},"engines":{"node":"*"},"repository":{"repository":{"type":"git","url":"git://github.com/johnmclear/ep_special_characters.git"}}}
