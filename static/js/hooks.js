@@ -1,7 +1,7 @@
 'use strict';
 
 exports.aceInitInnerdocbodyHead = (hookName, args, cb) => {
-  const path = '/static/plugins/ep_special_characters/static/css/ace.css';
+  const path = '../static/plugins/ep_special_characters/static/css/ace.css';
   args.iframeHTML.push(
       `<link rel="stylesheet" type="text/css" href="${path}"/>`);
   cb();
