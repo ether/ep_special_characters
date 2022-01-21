@@ -1,3 +1,5 @@
+![Publish Status](https://github.com/ether/ep_special_characters/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_special_characters/workflows/Backend%20tests/badge.svg)
+
 # ep_special_characters
 
 TODO: Describe the plugin.
