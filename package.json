@@ -11,10 +11,8 @@
     "node": ">=18.0.0"
   },
   "repository": {
-    "repository": {
-      "type": "git",
-      "url": "git://github.com/johnmclear/ep_special_characters.git"
-    }
+    "type": "git",
+    "url": "git://github.com/johnmclear/ep_special_characters.git"
   },
   "funding": {
     "type": "individual",
