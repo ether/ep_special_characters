@@ -9,7 +9,7 @@ TODO: Describe the plugin.
 From the Etherpad working directory, run:
 
 ```shell
-npm install --no-save --legacy-peer-deps ep_special_characters
+pnpm run plugins install ep_special_characters
 ```
 
 Or, install from Etherpad's `/admin/plugins` page.
