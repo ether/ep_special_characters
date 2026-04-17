@@ -5,8 +5,7 @@
 > uses a browser-side `require()` that Etherpad's current esbuild bundler
 > doesn't expose. Tracking fix in [#87](https://github.com/ether/ep_special_characters/issues/87).
 
-# ep_special_characters
-
+# Special Character Picker for Etherpad
 TODO: Describe the plugin.
 
 ## Installation
