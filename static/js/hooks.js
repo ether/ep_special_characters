@@ -11,6 +11,7 @@ exports.aceAttribsToClasses = (hookName, args, cb) => {
   if (args.key === 'specialCharacters' && args.value !== '') {
     return cb([`specialCharacters:${args.value}`]);
   }
+  return cb([]);
 };
 
 exports.aceCreateDomLine = (hookName, args, cb) => {
