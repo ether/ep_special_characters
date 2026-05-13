@@ -1,10 +1,5 @@
 [![Backend Tests Status](https://github.com/ether/ep_special_characters/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/ether/ep_special_characters/actions/workflows/test-and-release.yml)
 
-> ⚠️ **Known issue:** Clicking a character in the picker currently throws
-> `ReferenceError: require is not defined` because [`static/js/main.js:16`](static/js/main.js)
-> uses a browser-side `require()` that Etherpad's current esbuild bundler
-> doesn't expose. Tracking fix in [#87](https://github.com/ether/ep_special_characters/issues/87).
-
 # Special Character Picker for Etherpad
 TODO: Describe the plugin.
 

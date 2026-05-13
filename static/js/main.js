@@ -2,7 +2,21 @@
 
 $(document).ready(() => {
   const module = $('#specialCharactersModal');
+  const specialChars = $('.specialChars');
+  let isSpecialCharactersPopulated = false;
+
+  const populateSpecialCharacters = () => {
+    if (isSpecialCharactersPopulated) return;
+    const chars = [];
+    for (let i = 0x20; i <= 0x2FF; i++) {
+      chars.push(`<li class='specialChar'>&#${i}</li>`);
+    }
+    specialChars.append(chars.join(''));
+    isSpecialCharactersPopulated = true;
+  };
+
   $('.insertSpecialCharacter').click(() => {
+    populateSpecialCharacters();
     module.toggleClass('popup-show');
   });
 
@@ -13,18 +27,13 @@ $(document).ready(() => {
     const char = ($(this).text());
     $('.usedSpecialCharacters').append(this);
     $('.usedSpecialCharactersLabel').show();
-    const padeditor = require('ep_etherpad-lite/static/js/pad_editor').padeditor;
+    const padeditor = window.padeditor;
     module.toggleClass('popup-show');
+    if (!padeditor || !padeditor.ace) return;
     return padeditor.ace.callWithAce((ace) => {
       const rep = ace.ace_getRep();
       ace.ace_replaceRange(rep.selStart, rep.selEnd, char);
       ace.ace_focus();
     }, 'specialCharacters');
   });
-
-  let i = 0;
-  while (i <= 5000) {
-    $('.specialChars').append(`<li class='specialChar'>&#${i}</li>`);
-    i++;
-  }
 });
