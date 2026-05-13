@@ -1,6 +1,8 @@
 'use strict';
 
 $(document).ready(() => {
+  const SPECIAL_CHARACTER_START_CODE_POINT = 0x20;
+  const SPECIAL_CHARACTER_END_CODE_POINT = 0x2FF;
   const module = $('#specialCharactersModal');
   const specialChars = $('.specialChars');
   let isSpecialCharactersPopulated = false;
@@ -8,7 +10,7 @@ $(document).ready(() => {
   const populateSpecialCharacters = () => {
     if (isSpecialCharactersPopulated) return;
     const chars = [];
-    for (let i = 0x20; i <= 0x2FF; i++) {
+    for (let i = SPECIAL_CHARACTER_START_CODE_POINT; i <= SPECIAL_CHARACTER_END_CODE_POINT; i++) {
       chars.push(`<li class='specialChar'>&#${i}</li>`);
     }
     specialChars.append(chars.join(''));
