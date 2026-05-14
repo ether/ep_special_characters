@@ -29,13 +29,13 @@ $(document).ready(() => {
     const char = ($(this).text());
     $('.usedSpecialCharacters').append(this);
     $('.usedSpecialCharactersLabel').show();
-    const padeditor = window.padeditor;
+    const ace = window.epSpecialCharactersAce;
     module.toggleClass('popup-show');
-    if (!padeditor || !padeditor.ace) return;
-    return padeditor.ace.callWithAce((ace) => {
-      const rep = ace.ace_getRep();
-      ace.ace_replaceRange(rep.selStart, rep.selEnd, char);
-      ace.ace_focus();
+    if (!ace) return;
+    return ace.callWithAce((editor) => {
+      const rep = editor.ace_getRep();
+      editor.ace_replaceRange(rep.selStart, rep.selEnd, char);
+      editor.ace_focus();
     }, 'specialCharacters');
   });
 });

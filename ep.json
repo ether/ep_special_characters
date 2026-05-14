@@ -10,6 +10,7 @@
         "eejsBlock_dd_insert" : "ep_special_characters/hooks"
       },
       "client_hooks": {
+        "postAceInit": "ep_special_characters/static/js/hooks:postAceInit",
         "aceInitInnerdocbodyHead": "ep_special_characters/static/js/hooks:aceInitInnerdocbodyHead",
         "aceAttribsToClasses": "ep_special_characters/static/js/hooks:aceAttribsToClasses",
         "aceCreateDomLine": "ep_special_characters/static/js/hooks:aceCreateDomLine"

@@ -1,5 +1,9 @@
 'use strict';
 
+exports.postAceInit = (hookName, context) => {
+  window.epSpecialCharactersAce = context.ace;
+};
+
 exports.aceInitInnerdocbodyHead = (hookName, args, cb) => {
   const path = '../static/plugins/ep_special_characters/static/css/ace.css';
   args.iframeHTML.push(
