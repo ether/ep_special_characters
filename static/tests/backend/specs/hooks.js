@@ -13,7 +13,7 @@ describe(__filename, function () {
           });
     });
 
-    it('invokes cb with an empty array when key does not match (regression for #4)', function (done) {
+    it('invokes cb with empty array when key does not match (regression for #4)', function (done) {
       hooks.aceAttribsToClasses('aceAttribsToClasses', {key: 'bold', value: 'true'},
           (classes) => {
             assert.deepEqual(classes, []);
